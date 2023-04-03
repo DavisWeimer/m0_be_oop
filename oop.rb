@@ -37,13 +37,13 @@ class Vampire
     end
 end
 
-dracula = Vampire.new("Dracula")
+vampire1 = Vampire.new("Dracula")
 
-p dracula
+p vampire1
 
-dracula.vant_2_drink
+vampire1.vant_2_drink
 
-p dracula
+p vampire1
 
 #  it should have a dynamic name attribute
 #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
@@ -52,6 +52,28 @@ p dracula
 
 
 #  Write a Dragon class
+
+class Dragon
+    def initialize(name, rider, color)
+        @name = name
+        @rider = rider
+        @color = color
+        @is_hungry = true
+    end
+    def is_eating(foodz)
+        if foodz >= 4
+            puts @is_hungry = false
+        end
+    end
+end
+
+dragon1 = Dragon.new("Smaug", "None", "Red")
+
+p dragon1
+
+dragon1.is_eating(5)
+
+p dragon1
 
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic rider attribute (string)
