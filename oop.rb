@@ -14,7 +14,7 @@ end
 
 unicorn1 = Unicorn.new("Bubbles")
 
-unicorn1.say("I'm not real lol")
+unicorn1.say("Mooop!")
 
 p unicorn1
 
@@ -25,6 +25,26 @@ p unicorn1
 
 
 #  Write a class called Vampire
+
+class Vampire
+    def initialize(name, pet = "Bat")
+        @name = name
+        @pet = pet
+        @thirsty = true
+    end
+    def vant_2_drink
+        @thirsty = false
+    end
+end
+
+dracula = Vampire.new("Dracula")
+
+p dracula
+
+dracula.vant_2_drink
+
+p dracula
+
 #  it should have a dynamic name attribute
 #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
 #  it should have a thirsty attribute, that is true by default
@@ -32,6 +52,7 @@ p unicorn1
 
 
 #  Write a Dragon class
+
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic rider attribute (string)
 #  it should have a dynamic color attribute (string)
