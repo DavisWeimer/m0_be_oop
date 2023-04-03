@@ -83,6 +83,51 @@ p dragon1
 
 
 #  Write a Hobbit class
+
+class Hobbit
+    def initialize(name, disposition, age)
+        @name = name
+        @disposition = disposition
+        @age = age
+        @is_adult = false
+        @is_old = false
+        @has_ring = false
+    end
+    def celebrate_birthday
+            @age = @age + 1
+    end
+    def is_adult
+        if @age >= 33 && @age <= 100
+            puts @is_adult = true
+        end
+    end
+    def is_old
+        if @age >= 101
+            puts @is_old = true
+        end
+    end
+    def has_ring
+        if @name.include? "Frodo"
+            puts @has_ring = true
+        end
+    end
+end
+
+hobbit1 = Hobbit.new("Sancho Sandyfoot", "Stinky", 89)
+hobbit2 = Hobbit.new("Frodo", "Determined", 50)
+
+p hobbit1
+
+hobbit1.celebrate_birthday
+hobbit1.is_adult
+hobbit1.is_old
+
+p hobbit1
+
+p hobbit2
+hobbit2.has_ring
+p hobbit2
+
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic disposition attribute (string)
 #  it should have an age attribute that defaults to 0
