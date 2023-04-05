@@ -1,6 +1,7 @@
 # Write a class called Unicorn
 
 class Unicorn
+    attr_reader :name, :color, :say
     def initialize(name, color = "Silver")
         @name = name
         @color = color
@@ -18,6 +19,7 @@ unicorn1.say("Mooop!")
 
 p unicorn1
 
+
 # it should have a dynamic name attribute
 # it should have a color attribute, that is silver by default
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
@@ -27,6 +29,7 @@ p unicorn1
 #  Write a class called Vampire
 
 class Vampire
+    attr_reader :name, :pet
     def initialize(name, pet = "Bat")
         @name = name
         @pet = pet
@@ -54,6 +57,7 @@ p vampire1
 #  Write a Dragon class
 
 class Dragon
+    attr_reader :name, :rider, :color
     def initialize(name, rider, color)
         @name = name
         @rider = rider
@@ -85,6 +89,7 @@ p dragon1
 #  Write a Hobbit class
 
 class Hobbit
+    attr_reader :name, :disposition, :age
     def initialize(name, disposition, age)
         @name = name
         @disposition = disposition
@@ -128,10 +133,12 @@ p hobbit2
 hobbit2.has_ring
 p hobbit2
 
-#  it should have a dynamic name attribute (string)
-#  it should have a dynamic disposition attribute (string)
-#  it should have an age attribute that defaults to 0
-#  it should have a celebrate_birthday method. When called, the age increases by 1
-#  it should have an is_adult attribute (boolean) that is false by default. once a Hobbit is 33, it should be an adult
-#  it should have an is_old attribute that defaults to false. once a Hobbit is 101, it is old.
-#  it should have a has_ring attribute. If the Hobbit's name is "Frodo", true, if not, false.
+=begin  it should have a dynamic name attribute (string)
+  it should have a dynamic disposition attribute (string)
+  it should have an age attribute that defaults to 0
+  it should have a celebrate_birthday method. When called, the age increases by 1
+  it should have an is_adult attribute (boolean) that is false by default. once a Hobbit is 33, it should be an adult
+  it should have an is_old attribute that defaults to false. once a Hobbit is 101, it is old.
+  it should have a has_ring attribute. If the Hobbit's name is "Frodo", true, if not, false.
+=end
+
