@@ -62,11 +62,14 @@ class Dragon
         @name = name
         @rider = rider
         @color = color
-        @is_hungry = true
+        @is_hungry = true 
+        @counter = 0
     end
-    def is_eating(foodz)
-        if foodz >= 4
-            puts @is_hungry = false
+    def eat
+        if @counter < 4
+        @counter +=1
+        else @counter >= 4
+        @is_hungry = false
         end
     end
 end
@@ -74,10 +77,13 @@ end
 dragon1 = Dragon.new("Smaug", "None", "Red")
 
 p dragon1
-
-dragon1.is_eating(5)
-
+dragon1.eat
 p dragon1
+dragon1.eat
+dragon1.eat
+dragon1.eat
+p dragon1
+
 
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic rider attribute (string)
