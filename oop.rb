@@ -96,7 +96,7 @@ p dragon1
 
 class Hobbit
     attr_reader :name, :disposition, :age
-    def initialize(name, disposition, age)
+    def initialize(name, disposition, age = 0)
         @name = name
         @disposition = disposition
         @age = age
@@ -105,17 +105,9 @@ class Hobbit
         @has_ring = false
     end
     def celebrate_birthday
-            @age = @age + 1
-    end
-    def is_adult
-        if @age >= 33 && @age <= 100
-            puts @is_adult = true
-        end
-    end
-    def is_old
-        if @age >= 101
-            puts @is_old = true
-        end
+        @age += 1
+        @is_adult = true if @age >= 33
+        @is_old   = true if @age >= 101
     end
     def has_ring
         if @name.include? "Frodo"
@@ -124,16 +116,16 @@ class Hobbit
     end
 end
 
-hobbit1 = Hobbit.new("Sancho Sandyfoot", "Stinky", 89)
+hobbit1 = Hobbit.new("Sancho Sandyfoot", "Stinky", 189)
 hobbit2 = Hobbit.new("Frodo", "Determined", 50)
 
 p hobbit1
-
 hobbit1.celebrate_birthday
-hobbit1.is_adult
-hobbit1.is_old
-
 p hobbit1
+
+p hobbit2
+hobbit1.celebrate_birthday
+p hobbit2
 
 p hobbit2
 hobbit2.has_ring
